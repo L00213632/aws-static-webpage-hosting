@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birbal Ravindra Suryakar | Student Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #12345a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #dbeafe;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .student-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .student-card h2 {
+            color: #12345a;
+            margin-bottom: 20px;
+        }
+
+        .details {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            border-radius: 4px;
+        }
+
+        .details strong {
+            display: inline-block;
+            min-width: 130px;
+        }
+
+        .project {
+            margin-top: 25px;
+        }
+
+        .project h2 {
+            color: #12345a;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #12345a;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .student-card {
+                padding: 20px;
+            }
+
+            .details strong {
+                display: block;
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Student Website</h1>
+        <p>AWS CloudFormation Static Website Project</p>
+    </header>
+
+    <main>
+        <section class="student-card">
+            <h2>Student Information</h2>
+
+            <div class="details">
+                <strong>Full Name:</strong>
+                Birbal Ravindra Suryakar
+            </div>
+
+            <div class="details">
+                <strong>Student ID:</strong>
+                L00213632
+            </div>
+
+            <div class="details">
+                <strong>Programme:</strong>
+                MSc Computing (DevOps)
+            </div>
+
+            <div class="details">
+                <strong>Institution:</strong>
+                Atlantic Technological University (ATU)
+            </div>
+
+            <section class="project">
+                <h2>About This Project</h2>
+                <p>
+                    This website is part of my CloudFormation assignment.
+                    It demonstrates static website content hosted using
+                    Amazon S3 and infrastructure provisioned through
+                    AWS CloudFormation.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Birbal Ravindra Suryakar |
+            Student ID: L00213632
+        </p>
+    </footer>
+
+</body>
+</html>
