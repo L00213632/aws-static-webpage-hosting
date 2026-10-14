@@ -25,4 +25,4 @@ jobs:
 
 
       - name: Deploy to S3
-        run: aws s3 sync ./website s3://static-webpage-hosting-03/ --delete
+        run: aws s3 sync ./website s3://static-website-hosting-03/ --delete
