@@ -34,4 +34,32 @@ jobs:
           fi
 
       - name: Deploy to S3
-        run: aws s3 sync ./website s3://static-webpage-hosting-03/ --delete
+        env:
+          BUCKET: static-webpage-hosting-03
+          WEBSITE_DIR: ./website
+        run: |
+          set -euo pipefail
+
+          echo "Using bucket: ${BUCKET}"
+          echo "Using website directory: ${WEBSITE_DIR}"
+
+          # verify website files
+          if [ ! -f "${WEBSITE_DIR}/index.html" ]; then
+            echo "ERROR: ${WEBSITE_DIR}/index.html was not found."
+            echo "Check your repository folder structure or update WEBSITE_DIR." 
+            exit 1
+          fi
+
+          # check bucket existence and access
+          if ! aws s3api head-bucket --bucket "${BUCKET}" >/dev/null 2>&1; then
+            echo "Bucket ${BUCKET} does not exist or is not accessible with the configured credentials."
+            echo "To create the bucket automatically, uncomment the aws s3 mb command below (consider permissions & region)."
+            # For automatic creation, uncomment the following line. For us-east-1 no additional config is needed.
+            # aws s3 mb s3://${BUCKET} --region us-east-1
+            exit 1
+          fi
+
+          # sync files to S3
+          aws s3 sync "${WEBSITE_DIR}" "s3://${BUCKET}/" --delete
+
+          echo "Deployment to s3://${BUCKET}/ completed."
