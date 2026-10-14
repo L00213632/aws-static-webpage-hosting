@@ -24,4 +24,5 @@ jobs:
           aws-region: us-east-1
 
       - name: Upload website to S3
-        run: aws s3 sync . s3://${{ secrets.static-webpage-hosting-01 }} --delete
+        run: aws s3 sync ./website s3://static-webpage-hosting-01/ --delete
+        #run: aws s3 sync . s3://${{ secrets.static-webpage-hosting-01 }} --delete
