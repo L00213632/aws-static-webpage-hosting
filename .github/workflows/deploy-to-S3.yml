@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
 name: Deploy Static Website to S3
-=======
-name: Deploy static website to S3
->>>>>>> b1474d0c3b5397744d9c9e142b5be59aeeb60d76
+
 
 on:
   push:
@@ -28,11 +25,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-<<<<<<< HEAD
-      - name: Deploy to S3
-        run: aws s3 sync ./website s3://static-webpage-hosting-03/ --delete
-=======
 
       - name: Deploy to S3
-        run: aws s3 sync ./website s3://static-website-hosting-03/ --delete
->>>>>>> b1474d0c3b5397744d9c9e142b5be59aeeb60d76
+        run: aws s3 sync ./website s3://static-webpage-hosting-03/ --delete
