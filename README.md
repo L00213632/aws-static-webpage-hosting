@@ -32,3 +32,19 @@ access keys to the repository. Configure S3 static website hosting and any
 public access or CloudFront settings separately if you want the bucket contents
 to be publicly viewable.
 >>>>>>> d30299b (Yaml file added to depoy to S3)
+>>>>>>
+>>>>>>References
+>>>>>>
+https://www.youtube.com/watch?v=cwX3XAx3CGg&t=38s - CI/CD from GitHub to AWS | Deploy static website from GitHub to S3 | GitHub Actions
+
+https://www.youtube.com/watch?v=sIac8b4njkE - Deploy Static Website on S3 + CloudFront | Automate with CloudFormation
+
+Chatgpt - Model-GPT-6 - Create the YAML file -
+
+>>>>>>   Prompt 1: Create a GitHub Actions YAML file
+>>>>>> 
+>>>>>>   Prompt 2: Enable S3 static website hosting
+>>>>>> 
+>>>>>>   Prompt 3: Fix the S3 bucket ARN error
+>>>>>> 
+>>>>>>   Prompt 4: Troubleshoot the GitHub workflow folder
